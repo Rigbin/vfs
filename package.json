@@ -1,0 +1,42 @@
+{
+  "name": "vfs",
+  "version": "0.0.1",
+  "description": "virtual file system",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rigbin/vfs"
+  },
+  "homepage": "https://github.com/Rigbin/vfs#readme",
+  "author": "Harald Schwab <github@rigbit.at> (https://www.rigbit.at/)",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"./{src,test}/**/*.{js,ts}\"",
+    "lint": "tsc --noEmit && eslint \"src/**/*.{js,ts}\" --quiet --fix",
+    "prebuild": "npm run lint",
+    "prepare": "npm run build",
+    "preversion": "npm run lint && npm run format",
+    "test": "jest --silent",
+    "test:coverage": "jest --coverage --silent",
+    "test:watch": "jest --watchAll --silent"
+  },
+  "keywords": [
+    "typescript",
+    "npm",
+    "testing"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@types/node": "^17.0.4",
+    "@typescript-eslint/eslint-plugin": "^5.8.0",
+    "@typescript-eslint/parser": "^5.8.0",
+    "eslint": "^8.5.0",
+    "eslint-config-prettier": "^8.3.0",
+    "jest": "^27.4.5",
+    "prettier": "^2.5.1",
+    "ts-jest": "^27.1.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4"
+  }
+}
